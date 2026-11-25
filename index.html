@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>نسترن ظفرمند | پورتفولیوی علمی</title>
+
+<meta name="description" content="وب‌سایت رسمی نسترن ظفرمند، دانشجوی زیست‌شناسی سلولی و مولکولی با علاقه‌مندی به ژنومیکس، هماتولوژی و علوم زیست‌پزشکی.">
+
+<meta name="author" content="Nastaran Zafarmand">
+<meta name="theme-color" content="#153f35">
+
+<style>
+:root {
+  --green: #174f40;
+  --green-dark: #10382f;
+  --green-light: #e8f1ec;
+  --green-soft: #f3f7f4;
+  --white: #ffffff;
+  --text: #263c34;
+  --muted: #718078;
+  --border: #dce7e0;
+  --gold: #b99b62;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--green-soft);
+  color: var(--text);
+  line-height: 2;
+  overflow-x: hidden;
+}
+
+body[dir="ltr"] {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+/* Language */
+
+[data-en-block],
+[data-en-inline] {
+  display: none;
+}
+
+html[lang="en"] [data-fa-block] {
+  display: none !important;
+}
+
+html[lang="en"] [data-en-block] {
+  display: block !important;
+}
+
+html[lang="en"] [data-fa-inline] {
+  display: none !important;
+}
+
+html[lang="en"] [data-en-inline] {
+  display: inline !important;
+}
+
+/* Header */
+
+header {
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.navbar {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--green);
+  font-size: 19px;
+  font-weight: 800;
+  white-space: nowrap;
+  letter-spacing: .3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-size: 12px;
+  color: var(--text);
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: var(--green);
+}
+
+.lang-btn {
+  border: 1px solid var(--green);
+  color: var(--green);
+  background: transparent;
+  border-radius: 7px;
+  padding: 6px 13px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.lang-btn:hover {
+  background: var(--green);
+  color: white;
+}
+
+/* Hero */
+
+.hero {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(185,155,98,.12), transparent 28%),
+    linear-gradient(135deg, #e9f1eb, #f8faf8);
+  padding: 105px 0 95px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--green);
+  background: rgba(23,79,64,.08);
+  border: 1px solid rgba(23,79,64,.12);
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+  margin-bottom: 22px;
+  letter-spacing: .5px;
+}
+
+.hero h1 {
+  color: var(--green-dark);
+  font-size: clamp(34px, 6vw, 55px);
+  line-height: 1.5;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  color: var(--green);
+  font-size: clamp(17px, 3vw, 23px);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.hero-description {
+  max-width: 690px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 2.2;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-block;
+  padding: 10px 23px;
+  border-radius: 7px;
+  font-size: 13px;
+  transition: .2s;
+}
+
+.primary-btn {
+  background: var(--green);
+  color: white;
+}
+
+.primary-btn:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  border: 1px solid var(--green);
+  color: var(--green);
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  background: var(--green-light);
+}
+
+/* Sections */
+
+section {
+  padding: 76px 0;
+}
+
+section:nth-of-type(even) {
+  background: white;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-label {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section-title {
+  color: var(--green-dark);
+  font-size: clamp(23px, 4vw, 30px);
+  margin-top: 5px;
+  line-height: 1.6;
+}
+
+.section-line {
+  width: 55px;
+  height: 3px;
+  background: var(--gold);
+  margin-top: 13px;
+  border-radius: 5px;
+}
+
+.content-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 30px;
+  box-shadow: 0 7px 25px rgba(20,60,45,.035);
+}
+
+.content-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2.3;
+}
+
+.content-card h3 {
+  color: var(--green);
+  font-size: 17px;
+  margin: 25px 0 12px;
+}
+
+.content-card h3:first-child {
+  margin-top: 0;
+}
+
+.content-card ul {
+  padding-inline-start: 23px;
+}
+
+.content-card li {
+  color: var(--text);
+  font-size: 14px;
+  margin: 10px 0;
+  line-height: 2.1;
+}
+
+.content-card li::marker {
+  color: var(--gold);
+}
+
+/* Education */
+
+.education-card {
+  border-right: 4px solid var(--green);
+  background: var(--green-soft);
+  padding: 23px 25px;
+  border-radius: 8px;
+}
+
+body[dir="ltr"] .education-card {
+  border-right: 0;
+  border-left: 4px solid var(--green);
+}
+
+.education-card h3 {
+  color: var(--green-dark);
+  margin: 0 0 7px;
+  font-size: 17px;
+}
+
+.education-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Activities */
+
+.activity-group {
+  margin-bottom: 35px;
+}
+
+.activity-group:last-child {
+  margin-bottom: 0;
+}
+
+.activity-group h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.activity-group h3::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* Skills */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 15px;
+}
+
+.skill-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 19px 14px;
+  text-align: center;
+  color: var(--green-dark);
+  font-size: 14px;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.skill-card:hover {
+  border-color: var(--green);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(20,60,45,.06);
+}
+
+/* Certificates */
+
+.certificate-box {
+  background: var(--green-light);
+  border: 1px dashed #9db8a8;
+  border-radius: 12px;
+  padding: 27px;
+  text-align: center;
+}
+
+.certificate-box p {
+  color: var(--green-dark);
+  font-size: 14px;
+}
+
+/* Contact */
+
+.contact-section {
+  background: var(--green-dark) !important;
+}
+
+.contact-section .section-title {
+  color: white;
+}
+
+.contact-section .section-label {
+  color: #d7bd8a;
+}
+
+.contact-section .section-line {
+  background: #d7bd8a;
+}
+
+.contact-card {
+  border: 1px solid rgba(255,255,255,.17);
+  background: rgba(255,255,255,.06);
+  border-radius: 13px;
+  padding: 30px;
+  text-align: center;
+}
+
+.contact-card p {
+  color: #d4e2da;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.email-link {
+  display: inline-block;
+  color: #f0d8a5;
+  font-size: 15px;
+  direction: ltr;
+  word-break: break-word;
+  border-bottom: 1px solid rgba(240,216,165,.5);
+}
+
+/* Footer */
+
+footer {
+  background: #0c2c25;
+  color: #c8d8d0;
+  text-align: center;
+  padding: 22px 12px;
+  font-size: 12px;
+}
+
+footer p {
+  opacity: .85;
+}
+
+/* Mobile */
+
+@media(max-width: 850px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 0;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+}
+
+@media(max-width: 600px) {
+  .hero {
+    padding: 70px 0;
+  }
+
+  section {
+    padding: 52px 0;
+  }
+
+  .content-card {
+    padding: 21px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 23px;
+  }
+
+  .nav-links {
+    gap: 10px 13px;
+  }
+}
+</style>
+</head>
+
+<body dir="rtl">
+
+<header>
+  <div class="container navbar">
+
+    <a href="#home" class="logo">N. ZAFARMAND</a>
+
+    <nav class="nav-links">
+      <a href="#home">
+        <span data-fa-inline>خانه</span>
+        <span data-en-inline>Home</span>
+      </a>
+
+      <a href="#about">
+        <span data-fa-inline>پژوهشگر</span>
+        <span data-en-inline>Researcher</span>
+      </a>
+
+      <a href="#education">
+        <span data-fa-inline>تحصیلات</span>
+        <span data-en-inline>Education</span>
+      </a>
+
+      <a href="#activities">
+        <span data-fa-inline>فعالیت‌ها</span>
+        <span data-en-inline>Activities</span>
+      </a>
+
+      <a href="#skills">
+        <span data-fa-inline>مهارت‌ها</span>
+        <span data-en-inline>Skills</span>
+      </a>
+
+      <a href="#certificates">
+        <span data-fa-inline>مدارک</span>
+        <span data-en-inline>Certificates</span>
+      </a>
+
+      <a href="#contact">
+        <span data-fa-inline>تماس</span>
+        <span data-en-inline>Contact</span>
+      </a>
+
+      <button class="lang-btn" id="languageButton" onclick="toggleLanguage()">
+        English
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+  <div class="container hero-inner">
+
+    <div data-fa-block>
+      <span class="eyebrow">ACADEMIC PORTFOLIO</span>
+
+      <h1>نسترن ظفرمند</h1>
+
+      <div class="hero-subtitle">
+        زیست‌شناسی سلولی و مولکولی
+      </div>
+
+      <p class="hero-description">
+        دانشجوی زیست‌شناسی سلولی و مولکولی با علاقه‌مندی به پژوهش،
+        ژنومیکس، هماتولوژی و علوم زیست‌پزشکی و توسعه دانش در حوزه
+        تشخیص و درمان بیماری‌ها.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#about" class="primary-btn">درباره پژوهشگر</a>
+        <a href="#activities" class="secondary-btn">سوابق علمی</a>
+      </div>
+    </div>
+
+    <div data-en-block>
+      <span class="eyebrow">ACADEMIC PORTFOLIO</span>
+
+      <h1>Nastaran Zafarmand</h1>
+
+      <div class="hero-subtitle">
+        Cellular and Molecular Biology
+      </div>
+
+      <p class="hero-description">
+        A Cellular and Molecular Biology student with academic interests
+        in research, genomics, hematology, and biomedical sciences,
+        with a focus on advancing knowledge in disease diagnosis and treatment.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#about" class="primary-btn">About the Researcher</a>
+        <a href="#activities" class="secondary-btn">Academic Activities</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">PROFILE</div>
+      <h2 class="section-title">
+        <span data-fa-inline>درباره پژوهشگر</span>
+        <span data-en-inline>About the Researcher</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="content-card">
+
+      <div data-fa-block>
+        <p>
+          نسترن ظفرمند، دانشجوی زیست‌شناسی سلولی و مولکولی است که به
+          حوزه‌های زیست‌شناسی سلولی و مولکولی، هماتولوژی و علوم خون،
+          ژنومیکس و زیست‌پزشکی علاقه‌مند است. همچنین، به پژوهش و توسعه
+          روش‌های نوآورانه و نوین در تشخیص، پیشگیری و درمان بیماری‌ها علاقه دارد.
+        </p>
+
+        <br>
+
+        <p>
+          فعالیت‌های علمی و پژوهشی او بر توسعه دانش تخصصی، آشنایی با
+          فناوری‌های نوین آزمایشگاهی و مشارکت در برنامه‌های علمی و پژوهشی
+          متمرکز است. او در مسیر توسعه توانمندی‌های علمی و آزمایشگاهی،
+          در رویدادهای تخصصی، کنگره‌های علمی، کارگاه‌های آموزشی و
+          فعالیت‌های مرتبط با حوزه زیست‌پزشکی مشارکت داشته است.
+        </p>
+      </div>
+
+      <div data-en-block>
+        <p>
+          Nastaran Zafarmand is a Cellular and Molecular Biology student
+          with academic interests in Cell and Molecular Biology,
+          Hematology and Blood Sciences, Genomics, and Biomedical Sciences.
+          She is also interested in research and the development of
+          innovative and emerging approaches to disease diagnosis,
+          prevention, and treatment.
+        </p>
+
+        <br>
+
+        <p>
+          Her academic and research activities focus on expanding scientific
+          knowledge, exploring modern laboratory technologies, and
+          participating in scientific and research initiatives. She has
+          pursued academic development through participation in scientific
+          congresses, specialized workshops, and research-related activities.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">ACADEMIC BACKGROUND</div>
+      <h2 class="section-title">
+        <span data-fa-inline>تحصیلات</span>
+        <span data-en-inline>Education</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="education-card">
+
+      <div data-fa-block>
+        <h3>کارشناسی زیست‌شناسی سلولی و مولکولی</h3>
+        <p>مقطع کارشناسی</p>
+      </div>
+
+      <div data-en-block>
+        <h3>Bachelor's Degree in Cellular and Molecular Biology</h3>
+        <p>Undergraduate Program</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+
+<section id="activities">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">RESEARCH & EXPERIENCE</div>
+      <h2 class="section-title">
+        <span data-fa-inline>پژوهش‌ها و فعالیت‌های علمی</span>
+        <span data-en-inline>Research & Scientific Activities</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="content-card">
+
+      <div data-fa-block>
+
+        <div class="activity-group">
+          <h3>پژوهش‌ها و فعالیت‌های علمی</h3>
+          <ul>
+            <li>
+              ارائه مقاله مروری در کنفرانس بین‌المللی زیست‌شناسی سلولی
+              و تکوینی ایران، سال ۱۴۰۴
+            </li>
+            <li>حضور و شرکت در کنگره ژنومیکس سرطان</li>
+            <li>حضور و شرکت در کنگره زیست‌پزشکی</li>
+            <li>
+              گذراندن دوره کارآموزی در آزمایشگاه تخصصی،
+              تحت نظارت دانشگاه علوم پزشکی ایران
+            </li>
+          </ul>
+        </div>
+
+        <div class="activity-group">
+          <h3>عضویت‌های علمی</h3>
+          <ul>
+            <li>عضو انجمن زیست‌شناسی ایران</li>
+            <li>عضو کنگره زیست‌پزشکی ۲۰۲۶</li>
+            <li>عضو اتحاد زیست‌شناسان ایران</li>
+          </ul>
+        </div>
+
+        <div class="activity-group">
+          <h3>همکاری‌های علمی و پژوهشی</h3>
+          <ul>
+            <li>حضور و همکاری با اتحاد زیست‌شناسان ایران</li>
+            <li>
+              شرکت در کارگاه‌های مدرسه علم و فناوری ایران،
+              زیر نظر دانشگاه شهید بهشتی
+            </li>
+            <li>
+              همکاری با آزمایشگاه ژنومیکس در پارک علم و فناوری
+              دانشگاه شهید بهشتی
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div data-en-block>
+
+        <div class="activity-group">
+          <h3>Research & Scientific Activities</h3>
+          <ul>
+            <li>
+              Presentation of a Review Article at the International Iranian
+              Conference on Cell and Developmental Biology, 2025
+            </li>
+            <li>Participation in the Cancer Genomics Congress</li>
+            <li>Participation in the Biomedical Congress</li>
+            <li>
+              Completion of an internship at a specialized laboratory
+              under the supervision of Iran University of Medical Sciences
+            </li>
+          </ul>
+        </div>
+
+        <div class="activity-group">
+          <h3>Scientific Memberships</h3>
+          <ul>
+            <li>Member of the Iranian Biology Society</li>
+            <li>Member of the Biomedical Congress 2026</li>
+            <li>Member of the Iran Biologists Union</li>
+          </ul>
+        </div>
+
+        <div class="activity-group">
+          <h3>Scientific Collaborations</h3>
+          <ul>
+            <li>Collaboration with the Iran Biologists Union</li>
+            <li>
+              Participation in workshops organized by Iran School of Science
+              and Technology under Shahid Beheshti University
+            </li>
+            <li>
+              Collaboration with the Genomics Laboratory at Shahid Beheshti
+              University Science and Technology Park
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">TECHNICAL EXPERTISE</div>
+      <h2 class="section-title">
+        <span data-fa-inline>مهارت‌های تخصصی</span>
+        <span data-en-inline>Technical Skills</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">PCR</div>
+
+      <div class="skill-card">
+        <span data-fa-inline>استخراج DNA و RNA</span>
+        <span data-en-inline>DNA & RNA Extraction</span>
+      </div>
+
+      <div class="skill-card">
+        <span data-fa-inline>کلونینگ</span>
+        <span data-en-inline>Cloning</span>
+      </div>
+
+      <div class="skill-card">
+        <span data-fa-inline>بیوانفورماتیک</span>
+        <span data-en-inline>Bioinformatics</span>
+      </div>
+
+      <div class="skill-card">
+        <span data-fa-inline>تحلیل داده‌های زیستی</span>
+        <span data-en-inline>Biological Data Analysis</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+
+<section id="certificates">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">DOCUMENTATION</div>
+      <h2 class="section-title">
+        <span data-fa-inline>گواهی‌ها و مدارک</span>
+        <span data-en-inline>Certificates & Documents</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="certificate-box">
+
+      <div data-fa-block>
+        <p>
+          گواهی‌ها، مدارک علمی و سوابق آموزشی در این بخش
+          به‌صورت مستند و قابل مشاهده ارائه خواهند شد.
+        </p>
+      </div>
+
+      <div data-en-block>
+        <p>
+          Academic certificates, documents, and educational records
+          will be presented in this section.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact-section">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="section-label">GET IN TOUCH</div>
+
+      <h2 class="section-title">
+        <span data-fa-inline>راه‌های ارتباطی</span>
+        <span data-en-inline>Contact</span>
+      </h2>
+
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-card">
+
+      <div data-fa-block>
+        <p>
+          برای ارتباطات علمی، پژوهشی و همکاری‌های تخصصی
+          می‌توانید از طریق ایمیل زیر اقدام کنید.
+        </p>
+      </div>
+
+      <div data-en-block>
+        <p>
+          For academic, research, and professional inquiries,
+          please feel free to contact via email.
+        </p>
+      </div>
+
+      <a class="email-link"
+         href="mailto:nastaran23zafarmand@gmail.com">
+        nastaran23zafarmand@gmail.com
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>
+    © 2026 Nastaran Zafarmand |
+    <span data-fa-inline>تمامی حقوق محفوظ است.</span>
+    <span data-en-inline>All Rights Reserved.</span>
+  </p>
+</footer>
+
+<script>
+function toggleLanguage() {
+  const root = document.documentElement;
+  const isEnglish = root.lang === "en";
+
+  if (isEnglish) {
+    root.lang = "fa";
+    root.dir = "rtl";
+    document.body.dir = "rtl";
+    document.getElementById("languageButton").textContent = "English";
+    document.title = "نسترن ظفرمند | پورتفولیوی علمی";
+  } else {
+    root.lang = "en";
+    root.dir = "ltr";
+    document.body.dir = "ltr";
+    document.getElementById("languageButton").textContent = "فارسی";
+    document.title = "Nastaran Zafarmand | Academic Portfolio";
+  }
+}
+</script>
+
+</body>
+    </html>
+            
